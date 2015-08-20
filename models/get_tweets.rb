@@ -10,16 +10,18 @@ class GetTweets
   end
 
   TWITTER = Twitter::REST::Client.new do |config|
-    # go to https://dev.twitter.com/apps and create your own twitter app. Then grab your keys and replace these ones
-    config.consumer_key = "SOo0mIfGvsFVP7OlrNVaRS7bE"
-    config.consumer_secret = "yzNnxhbZknAcIOWXiPAL7UWVrdqr3hBYgLJPs6sTqaYiCVEXHh"
-    config.access_token = "276237692-vwCB7oLa5TWBoDFv7MVdap6aDxzAqdVFbpyjrwQM"
-    config.access_token_secret = "iXQ7vSO7Rvq8zVnZO3u8LDRMQvTzcHCfTRDUTBB3ZNRk0"
+    # go to https://dev.twitter.com/apps and create your own twitter app. Then grab your keys and replace these ones - DONE
+    config.consumer_key = "zstclSidoy8EFJ0lZHUx5O0QV"
+    config.consumer_secret = "HMEXe1byd3et2ehm6rUbIHlE06QTJQiNkSk0JjMEBft7vcaUBh"
+    config.access_token = "3233439444-32Yn9ibL1vq4mSmwK4EyUSvLEEbkfdDd9GQI7pk"
+    config.access_token_secret = "LnThkJxEt1kreTJo8FpQw1yZyj1Osv9DZX3BvhtFaVe90"
   end
 
   def get_search_results
     twitter_search_results = []
+    binding.pry
     TWITTER.search(handle).each do |tweet|
+      # binding.pry
       # we're saving the tweet user's name and the tweet text in an array of arrays
       twitter_search_results << [tweet.user.name, tweet.text]
     end

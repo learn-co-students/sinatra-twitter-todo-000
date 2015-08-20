@@ -10,6 +10,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'require_all'
 gem 'twitter'
+gem 'pry'
 
 group :test do
   gem 'rspec'
