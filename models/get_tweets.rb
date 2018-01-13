@@ -1,4 +1,5 @@
-# This class handles connecting to the Twitter API. In Rack Todo, this lived in app.rb. Here's we've abstracted it out into its own class. This class we will then initialize in app.rb.
+# This class handles connecting to the Twitter API. In Rack Todo, this lived in app.rb.
+#Here we've abstracted it out into its own class. This class we will then initialize in app.rb.
 
 # Our Gemfile has the twitter gem and config/environment requires it through Bundler.
 
@@ -11,10 +12,10 @@ class GetTweets
 
   TWITTER = Twitter::REST::Client.new do |config|
     # go to https://dev.twitter.com/apps and create your own twitter app. Then grab your keys and replace these ones
-    config.consumer_key = "SOo0mIfGvsFVP7OlrNVaRS7bE"
-    config.consumer_secret = "yzNnxhbZknAcIOWXiPAL7UWVrdqr3hBYgLJPs6sTqaYiCVEXHh"
-    config.access_token = "276237692-vwCB7oLa5TWBoDFv7MVdap6aDxzAqdVFbpyjrwQM"
-    config.access_token_secret = "iXQ7vSO7Rvq8zVnZO3u8LDRMQvTzcHCfTRDUTBB3ZNRk0"
+    config.consumer_key = "awseldvjapisuhq34857lskjfvh"
+    config.consumer_secret = "svmnnse56ajhd8f456oajhsdf645lqwht8"
+    config.access_token = "jdhruaseakjh4;sd85h8ehrfks9krg4mdjhhfg294hgf7m5mnghf"
+    config.access_token_secret = "aer87toiuhfjdhflsyraeryowefh"
   end
 
   def get_search_results
